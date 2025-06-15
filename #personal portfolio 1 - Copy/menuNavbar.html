@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Typography Background</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Space Grotesk', sans-serif;
+      background: linear-gradient(to bottom, #05070B, #FF793F);
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    h1 {
+      font-size: 4rem;
+      font-weight: 600;
+    }
+
+    .subtitle {
+      font-size: 1.5rem;
+      margin-top: 0.5rem;
+      font-weight: 400;
+      opacity: 0.8;
+    }
+
+    .colors {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .color {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      font-weight: bold;
+      color: white;
+    }
+
+    .color[data-hex]::after {
+      content: attr(data-hex);
+      position: absolute;
+      margin-top: 80px;
+      font-size: 0.7rem;
+      color: rgba(255, 255, 255, 0.7);
+    }
+  </style>
+</head>
+<body>
+  <h1>Space Grotesk</h1>
+  <div class="subtitle">Typography Background Hero</div>
+
+  <div class="colors">
+    <div class="color" style="background:#FF793F;" data-hex="#FF793F"></div>
+    <div class="color" style="background:#C387FF;" data-hex="#C387FF"></div>
+    <div class="color" style="background:#05070B;" data-hex="#05070B"></div>
+    <div class="color" style="background:#43256E;" data-hex="#43256E"></div>
+    <div class="color" style="background:#FFFFFF; color: black;" data-hex="#FFFFFF"></div>
+  </div>
+</body>
+</html>
